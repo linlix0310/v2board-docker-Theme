@@ -29,7 +29,7 @@ git submodule update --init
 echo '  branch = master' >> .gitmodules
 git submodule update --remote
 
-mv Bob-Theme-Argon www/public/theme/
+mv ../Bob-Theme-Argon www/public/theme/
 
 #5、启动docker
 docker-compose up -d
