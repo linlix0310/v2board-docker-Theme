@@ -15,7 +15,6 @@ git clone https://github.com/BobCoderS9/Bob-Theme-Argon.git
 git clone https://github.com/v2board/v2board-docker.git
 mv v2board-docker v2b
 
-mv v2board-docker-Theme/caddy.conf v2b/
 rm -rf v2b/caddy.conf
 rm -rf v2b/docker-compose.yaml
 
@@ -40,9 +39,9 @@ docker-compose exec www bash &
 
 
 #7、配置环境以及安装
-wget https://getcomposer.org/download/1.9.0/composer.phar
-php composer.phar global require hirak/prestissimo
-php -d memory_limit=-1 composer.phar install
+wget https://getcomposer.org/download/1.9.0/composer.phar &
+php composer.phar global require hirak/prestissimo &
+php -d memory_limit=-1 composer.phar install &
 php artisan v2board:install
 
 #to do 输入数据库等信息
