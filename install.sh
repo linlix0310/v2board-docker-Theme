@@ -35,14 +35,14 @@ docker-compose up -d
 
 
 #6、进入容器
-docker-compose exec www bash &
+docker-compose exec www bash 
 
 
 #7、配置环境以及安装
-wget https://getcomposer.org/download/1.9.0/composer.phar &
-php composer.phar global require hirak/prestissimo &
-php -d memory_limit=-1 composer.phar install &
-php artisan v2board:install
+docker-compose exec www bash  -c "wget https://getcomposer.org/download/1.9.0/composer.phar"
+docker-compose exec www bash  -c "php composer.phar global require hirak/prestissimo" 
+docker-compose exec www bash  -c "php -d memory_limit=-1 composer.phar install" 
+docker-compose exec www bash  -c  "php artisan v2board:install"
 
 #to do 输入数据库等信息
 
