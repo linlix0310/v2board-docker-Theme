@@ -35,7 +35,7 @@ docker-compose up -d
 
 
 #6、进入容器
-docker-compose exec www bash 
+#docker-compose exec www bash 
 
 
 #7、配置环境以及安装
