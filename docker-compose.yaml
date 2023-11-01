@@ -15,6 +15,7 @@ services:
       - '443:443'
     restart: always
   mysql:
+    network_mode: host
     image: mysql:5.7.29
     volumes:
       - './mysql:/var/lib/mysql'
